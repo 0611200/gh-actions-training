@@ -9,6 +9,10 @@ on:
   pull_request: 
     branches: 
       - main
+  issues: 
+    types: 
+      - opened
+      - closed
   schedule:
     - cron: 0 12 * * *
     - cron: 0 9 * * 0
