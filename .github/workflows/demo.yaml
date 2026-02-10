@@ -37,7 +37,7 @@ jobs:
     needs: [job1]
     steps:
       - name: Step2
-        run: echo "This is step2 with need of greeting"
+        run: echo "This is step2 with need of greeting!!!!!"
       - name:  step3
         if: ${{ inputs.areYouFeelingGood }}
         run: echo "i am doing grat!"
