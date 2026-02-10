@@ -32,6 +32,7 @@ jobs:
     steps:
       - name: Say hello
         run: echo "we are learning github actions"
+        if: ${{env.MY_VAR == 'shloka'}}
   job2:
     runs-on: ubuntu-latest
     env:
