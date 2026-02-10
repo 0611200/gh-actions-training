@@ -22,7 +22,10 @@ on:
         description: "Are you feeling good?"
         type: boolean
         default: false
-
+env:
+  MY_VAR: Shloka
+  MY_GREETINGS: World
+  
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -41,5 +44,6 @@ jobs:
       - name: step4
         if: ${{ inputs.areYouFeelingGood }}
         run: echo "i am not good"
-        
+      - name: step5
+        run: echo "my superior code is ${{env.MY_VAR}} with ${{envMY_GREETINGS}} "
       
