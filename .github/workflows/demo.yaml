@@ -45,5 +45,5 @@ jobs:
         if: ${{ inputs.areYouFeelingGood }}
         run: echo "i am not good"
       - name: step5
-        run: echo "my superior code is ${{env.MY_VAR}} with ${{envMY_GREETINGS}} "
+        run: echo "my superior code is ${{env.MY_VAR}} with ${{env.MY_GREETINGS}} "
       
