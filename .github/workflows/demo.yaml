@@ -33,7 +33,7 @@ jobs:
       - name: Say hello
         #run: echo "we are learning github actions"
         if: ${{ env.MY_VAR == 'shloka' }}
-        run: echo "welcome Ms.Shloka"
+        run: echo "welcome Ms ${{env.MY_VAR}}"
   job2:
     runs-on: ubuntu-latest
     env:
