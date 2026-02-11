@@ -27,6 +27,6 @@ jobs:
       - name: Display message
         run: |
           echo "welcome, ${{ inputs.user_name }}"
-          echo "${{ vars.ENV_GREETING }}" from "{{ inputs.user_name }}
+          echo "${{ vars.ENV_GREETING }}" from "{{ inputs.user_name }}"
   
       
