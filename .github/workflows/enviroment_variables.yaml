@@ -1,0 +1,33 @@
+name: Enviroment Variables
+
+on: 
+  workflow_dispatch: 
+    inputs:
+      target_env:
+        description: "Choose Enviroment Variable according to your choice"
+        type:  choice
+        options: [staging, Production, Test]
+        default: Test
+      user_name :
+        description: "Enter your Name:"
+        type: string
+        required: true
+        default: "Guest"
+
+jobs:
+  Meet:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.target_env }}
+
+    steps:
+      - name: show selected  Enviroment
+        run: echo "selected enviroment: ${{ inputs.target_env }}"
+
+      - name: Display message
+        run: |
+          echo "welcome, ${{ inputs.user_name }}"
+          echo "${{ vars.ENV_GREETING }}" from "{{ inputs.user_name }}
+          
+      - 
+  
+      
